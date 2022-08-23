@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+
+            body {
+                background-color: #141A26;
+                color: white;
+            }
+            h1 {
+                text-align: center;
+            }
+            .box {
+                background-color: #2E3D59;
+                width: 400px;
+                height: 500px;
+                padding: 10px;
+                border-radius: 30px;
+                margin:0 auto;
+                text-align: center;
+            }
+            .box h2 {
+                margin:10px;
+            }
+            .box #scorePage {
+                margin:0px;
+                margin-top:190px;
+                
+            }
+            .box #star {
+                color:lemonchiffon;
+                font-size: x-large;
+                margin: 0px;
+            }
+            .box #percentage {
+                font-size: xx-large;
+                margin: 10px;
+            }
+            /*#goToFirstPage {
+                width: 100px;
+                height: 25px;
+                margin-top: 50px;
+                border-radius: 10px;
+                border:0px;
+            }*/
+        </style>
+        <script>
+            function star(p) {
+                if (p <= 20){
+                    document.getElementById("star").innerHTML = '☆';
+                }else if (p < 30){
+                    document.getElementById("star").innerHTML = '★';
+                }else if (p < 40){
+                    document.getElementById("star").innerHTML = '★☆';
+                }else if (p < 50){
+                    document.getElementById("star").innerHTML = '★★';
+                }else if (p < 60){
+                    document.getElementById("star").innerHTML = '★★☆';
+                }else if (p < 70){
+                    document.getElementById("star").innerHTML = '★★★';
+                }else if (p < 80){
+                    document.getElementById("star").innerHTML = '★★★☆';
+                }else if (p < 90){
+                    document.getElementById("star").innerHTML = '★★★★';
+                }else if (p < 100){
+                    document.getElementById("star").innerHTML = '★★★★☆';
+                }else if (p == 100){
+                    document.getElementById("star").innerHTML = '★★★★★';
+                }
+            }
+        </script>
+        <script src="scorePageStyle.js"></script>
+        
+    </head>
+    <body>
+        <h1>Big Question</h1>
+        <div class="box" id="scoreBox">
+            <h2 id="boxTitle">우주</h2>
+            <h3>점수</h3>
+            <p id="scorePage"></p>
+            <p id="star"></p>
+            <p id="percentage"></p>
+
+            <script>
+                temp = location.href.split("?");
+                data = temp[1].split(":")
+                score = data[0];
+                page = data[1]; 
+                colorType = data[2];
+
+
+                var percentage = score/page * 100;
+
+                document.getElementById("scorePage").innerHTML = score + ' / ' + page + '<br>';
+                document.getElementById("percentage").innerHTML = parseFloat(percentage).toFixed(0) + '<br>';
+                star(percentage);
+
+                //색 변경하기
+                switch(colorType) {
+                    case "uQ":          //배경색,   글자색,     박스색,     별 색
+                        setColor.uQuestColor("#141A26", "white", "#2E3D59", "lemonchiffon");
+                        break;
+                    case "wQ":          //배경색,   글자색,     박스색,     별 색
+                        setColor.uQuestColor("#141A26", "powderblue", "#2E3D59", "lemonchiffon");
+                        document.getElementById("boxTitle").innerHTML='세계';
+                        break;
+                        
+                }
+            </script>
+            <!--<input id="goToFirstPage" type="button" value="시작페이지로" onclick="location.href='myWeb0.html'">-->
+            <a href="myWeb0.html" style="text-decoration: none; color:powderblue">시작페이지로</a>
+        </div>
+    </body>
+</html>

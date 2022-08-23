@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Questions</title>
+        <link rel="stylesheet" href="QuestionPageStyle.css">
+        
+        
+    </head>
+    <body>  
+        <div id="head"><h2>Big Questions(가제)</h2></div>
+        <!--문제 상자-->
+        <div id="questionBox">
+            <!--문제 영역-->
+            <div id="questionArea">
+                <h3 id="qTitle"></h3>
+                <p id="question"></p>
+            </div>
+            <!--버튼 영역-->
+            <div id="ox button">
+                <input class="oxButton" id="o_button" type="button" value="o" onclick="
+                btnClick('o');
+                ">
+                <input class="oxButton" id="x_button" type="button" value="x" onclick="
+                btnClick('x');
+                ">
+                <input id="nextButton" type="button" value="다음" onclick="
+                btnClick('next');
+                ">
+            </div>
+            <!--정답 여부-->
+            <div id="commentArea">
+                <p id="chackAnswer"></p>
+                <p id="commentary"></p>
+            </div>
+        </div>
+        <!--변수 받기-->
+        <script>      
+            temp = location.href.split("?");
+            data = temp[1].split(':');
+            questionsNum = data[0];
+            scorePageColorType = data[1];
+        </script>
+
+        <div class="backgroundCicle" class="c1" id="small"></div>
+        <div class="backgroundCicle" class="c2" id="middle"></div>
+        <div class="backgroundCicle" class="c3" id="big"></div>
+
+        <script id="questionsF" src="questionsUniverse.js"></script>
+        <script src="qSource.js"></script>
+        <script>
+            questions(0); // 첫페이지 적용
+        </script>
+    </body>
+</html>

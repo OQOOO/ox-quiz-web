@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        계획 : 가능한 한 객체화
+            
+        색 변환을 따로 js 파일로 객체로 만들어서 문제 계열마다 다르게 적용
+        마우스 올려놓을때 효과 적용
+
+        문제 추가법
+        이 파일에서 문제 html 복붙, 문제 html 파일 복붇 후 링크, 데이터 전송 위치 수정
+        문제 js 파일 복사한 후 문제 html 파일에 연결
+        그 외 종료화면 변수 추가
+    -->
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <style>
+body {
+    background: silver;
+    color: black;
+}
+h1 {
+    text-align: center;
+}
+.boxAndImg {
+    width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 400px 700px;
+}
+.img{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 700px;
+    height: 300px;
+    background: black;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    object-fit: none;
+    position: relative;
+}
+img {
+    position: absolute;
+}
+.box {
+    background: #AAB6CC;
+    width: 400px;
+    height: 300px;
+
+    border-color:black;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    display: grid;
+    grid-template-rows: 230px;
+    margin:0 auto;
+    margin-bottom: 25px;
+    text-align: center;
+    z-index: 0;
+}
+.box h2 {
+    margin:10px;
+}
+.box p {
+    margin:5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+}
+    .selectionAndStart {
+        text-align: center;
+        z-index: 0;
+    }
+        .selectBox {
+            width:70px;
+            height: 35px;
+            border-color:black;
+            border-width: 2px;
+            border-radius: 10px;
+            margin:0;
+        }
+        .startButton {
+            background-color: transparent;
+            color:black;
+            margin:10px;
+            margin-right:5px;
+            width:250px;
+            height: 35px;
+            border-radius: 10px;
+            margin-left: 0px;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        .startButton:focus {
+            outline: none;
+        }
+        .BtnBackgroundEl {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: white;
+            z-index: -2;
+        }
+        .startButton::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color:whitesmoke;
+            top: 0%;
+            left: -100%;
+            transition: all 0.4s;
+            z-index: -1;
+        }
+        .startButton:hover::before {
+            transform: translateX(100%);
+        }
+        .startButton:hover::after {
+            transform: translateX(100%);
+        }
+        .startButton:hover {
+            font-weight: bold;
+            border-color: skyblue;
+            color: black;
+        }
+
+
+                    
+
+        </style>
+        <script>
+            function handleOnChange(e) {
+                // 선택된 데이터 가져오기
+                uQvalue = e.value;
+                
+                // 데이터 출력
+                document.getElementById('result').innerText = uQvalue;
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Big Questions(가제)</h1>
+            <!--우주 문제 상자-----------------------------uQ-->
+        <div class="boxAndImg">
+            <div class="box" id="uBox">
+                <!--설명-->
+                <div class="comment">
+                    <h2>우주</h2>
+                    <p>
+                        우주에 대해 얼마나 알고계시나요?
+                        천문학의 역사는 문명의 역사만큼 오래되었고 하늘에 대한 호기심은
+                        최초의 지성이 지구에 탄생한 순간부터 시작되었습니다.
+                        알면 쉽지만 모르면 재밌는 문제들을 풀어보세요
+                    </p>
+                </div>
+                <div class="selectionAndStart">
+                    <select class="selectBox" id="uQselect" name="choice" onchange="handleOnChange(this)">
+                        <option value="none">선택</option>
+                        <option value=3>3문제</option>
+                        <option value=16>16문제</option>
+                    </select>
+                    <!--버튼-->
+                    <button class="startButton" id="uQstart" onclick="
+                        if(uQvalue > 0) {
+                            //데이터 전송
+                            location.href='myWeb1.html?' + uQvalue + ':' + 'uQ';
+                        }
+                    ">
+                        <span class="BtnBackgroundEl"></span>
+                    시작!</button>
+                </div>
+            </div>
+            <div class="img" id="spaceImg">
+                <img src="img_star.jpg" style="left:-30%; top:-110%;">
+            </div>
+        </div>
+        <!--세계 문제 상자-----------------------------wQ-->
+        <div class="boxAndImg">
+            <div class="box">
+                <!--설명-->
+                <div class="comment" style="color:black">
+                    <h2>세계</h2>
+                    <p>
+                        우리가 발딛고 살아가는 세계에 대해 얼마나 알고계시나요?
+
+                    </p>
+                </div>
+                <!-- 선택창과 버튼 -->
+                <div class="selectionAndStart">
+                    <select class="selectBox" id="uQselect" name="choice" onchange="handleOnChange(this)">
+                        <option value="none">선택</option>
+                        <option value=3>3문제</option>
+                        <option value=10>10문제</option>
+                    </select>
+                    <!--버튼-->
+                    <button class="startButton" id="uQstart" type="button" onclick="
+                        if(uQvalue > 0) {
+                            //데이터 전송
+                            location.href='q_world.html?' + uQvalue + ':' + 'wQ';
+                        }
+                    ">
+                        <span class="BtnBackgroundEl"></span>
+                    시작!</button>
+                </div>
+            </div>
+            <div class="img" id="worldImg">
+                <img src="img_newyork2.jpg">
+            </div>
+        </div>
+        <!--
+        <script>
+            name = "Hey";
+            content = "Fighting!!!";
+            location.href="myWeb1.html?" + name + ":" + content;
+        </script>
+        -->
+        <div id="result"></div>
+    </body>
+</html>
