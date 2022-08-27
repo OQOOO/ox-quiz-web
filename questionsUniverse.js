@@ -5,7 +5,7 @@
 function questions(a) {
     switch(a){
         case 0:
-            questionPageFunc.setColor('#164F73', '#6E8C2E', '#071A40', '#010D26', 'white');
+            questionPageFunc.setColor('#F2ECCE', '#F2DEA2', '#BF9A84', '#A6746F', 'black');
             if(btnCnt >= 1){
                 questionPageFunc.setColor('#010D26', '#071A40', '#6E8C2E', '#164F73', 'white');
             }
@@ -18,9 +18,9 @@ function questions(a) {
             "빅뱅 이후 137억 7(±4)천만년이 경과했습니다.");
             break;
         case 1:                         //작은원, 중간원, 큰 원, 배경, 글자색
-            questionPageFunc.setColor('#660505', '#9C1500', '#A8340A', '#C7560A', 'white');
+            questionPageFunc.setColor('#BF6734', '#8C2108', '#590202', '#260101', 'white');
             if(btnCnt >= 1){//버튼이 눌린 횟수. qSource에 있음
-                questionPageFunc.setColor('#0D0D0D', '#6E7EFB', '#FFFFFF', '#FFFA85', 'white');
+                questionPageFunc.setColor('#0D0D0D', '#AC78FF', '#FFFFFF', '#DBC4FF', 'white');
             }
             document.getElementById('qTitle').innerHTML=
             "가장 큰 단일 천체";
@@ -29,7 +29,7 @@ function questions(a) {
             questionPageFunc.answerAndComment('x',
             "발견된 가장 큰 단일 천체는 초대질량 블랙홀중 하나인 TON 618입니다.\
             지름이 3,960억 km에 달하는 블랙홀로 태양의 660억 배의 질량을 가지고 있으며, \
-            흡수중인 물질을 극도로 가열해 태양의 140조 배에 달하는 빛을 방출하고 있습니다.");
+            흡수중인 물질을 마찰열로 가열해 태양의 140조 배에 달하는 빛을 방출하고 있습니다.");
             break;
         case 2:
             questionPageFunc.setColor('#403824', '#BFB8A4', '#736440', '#8A8577', 'white');
@@ -41,7 +41,7 @@ function questions(a) {
             "명왕성의 지름은 2,376km, 달의 지름은 3,474km로 명왕성은 달보다 작습니다.");
             break;
         case 3:
-            questionPageFunc.setColor('#F2D22E', '#F2A922', '#F27F1B', '#F26A1B', 'black');
+            questionPageFunc.setColor('#F2F2F2', '#F2E5BD', '#D9C8A9', '#AEC1C9', 'black');
             document.getElementById('qTitle').innerHTML=
             "태양의 크기";
             document.getElementById('question').innerHTML=
@@ -54,10 +54,9 @@ function questions(a) {
             document.getElementById('qTitle').innerHTML=
             "우리 은하의 크기";
             document.getElementById('question').innerHTML=
-            "우리 은하는 국부 은하군에서 가장 큰 은하이다.<br>\
-            (국부 은하군 : 우리 은하가 포함된 은하들의 집단으로 40개 이상의 은하로 이루어져 있다.)";
+            "우리 은하는 국부 은하군에서 가장 큰 은하이다.";
             questionPageFunc.answerAndComment('x',
-            "국부 은하군엔 우리 은하를 포한한 40개 이상의 은하가 모여있으며\
+            "국부 은하군은 우리 은하를 포한한 40개 이상의 은하 집단이며\
             우리 은하는 그곳에서 두번째로 큰 은하입니다.<br>\
             국부 은하군에서 가장 큰 은하는 안드로메다 은하 이며<br>\
             지름 220,000광년으로 우리 은하의 두배정도의 크기를 지니고 있습니다.");
@@ -77,9 +76,9 @@ function questions(a) {
             오래전 방출된 빛이 지구에 도달함에 따라 점점 확장되고 있습니다. 사실 개인의 입장에서 관측 가능한 우주의 중심은 자기 자신입니다.");
             break;
         case 6:
-            questionPageFunc.setColor('#060B11', '#072740', '#1A3F5B', '#060B11', 'white');
+            questionPageFunc.setColor('#000000', '#072740', '#1A3F5B', '#101B24', 'white');
             if(btnCnt >= 1){
-                questionPageFunc.setColor('#243D40', '#F2CA80', '#1D2F40', '#090826', 'white');
+                questionPageFunc.setColor('#243D40', '#F2CA80', '#1D2F40', '#101B24', 'white');
             }
             document.getElementById('qTitle').innerHTML=
             "암흑물질";
@@ -170,8 +169,8 @@ function questions(a) {
             document.getElementById('qTitle').innerHTML=
             "거시공동";
             document.getElementById('question').innerHTML=
-            "거시공동(void) 내부엔 암흑물질이 다른곳보다 많다.";
-            questionPageFunc.answerAndComment('x', 
+            "거시공동(void) 내부엔 암흑물질이 다른곳보다 적다.";
+            questionPageFunc.answerAndComment('o', 
             "거시공동이란 은하 필라멘트 사이에 존재하는 은하가 없거나 극소수로 구성된 아주 거대한 공간입니다. \
             이 내부엔 물질 뿐 아니라 암흑물질도 거의 존재하지 않습니다. 우주 물질의 배치는 거시공동을 사이에 둔 은하 필라멘트의 그물과 같은 구조를 나타내는데 \
             이는 초기 우주에서 양자 요동으로 인해 발생한 밀도의 비대칭이 우주의 팽창에 따라 지금의 형태를 이루게 된 것으로 추정되고 있습니다.");
@@ -246,9 +245,9 @@ function questions(a) {
             document.getElementById('qTitle').innerHTML=
             "새로운 별";
             document.getElementById('question').innerHTML=
-            "우리 은하에선 매년 백만개 이상의 별이 새로 태어난다.";
-            questionPageFunc.answerAndComment('x',
-            "우리 은하엔 수천억개의 별이 있지만 매년 태어나는 별은 약 3개 입니다. 우주에서 태어날 별들은 이미 대부분 만들어진 상태입니다.");
+            "우리 은하에선 매년 태어나는 별의 수는 100개 이하다.";
+            questionPageFunc.answerAndComment('o',
+            "우리 은하엔 수천억개의 별이 있지만 매년 태어나는 별은 약 3개 입니다. 우주의 별들은 이미 대부분 만들어진 상태입니다.");
             break;
     }
 }

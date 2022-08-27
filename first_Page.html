@@ -7,11 +7,12 @@
         <title></title>
         <style>
 body {
-    background: silver;
+    background: #8A7C6B;
     color: black;
 }
 h1 {
     text-align: center;
+    color:white;
 }
 .boxAndImg {
     width: 1000px;
@@ -35,7 +36,7 @@ img {
     position: absolute;
 }
 .box {
-    background: #AAB6CC;
+    background: #D7CBBD;
     width: 400px;
     height: 300px;
 
@@ -66,7 +67,7 @@ img {
         .selectBox {
             width:70px;
             height: 35px;
-            border-color:black;
+            border-color:#8A7C6B;
             border-width: 2px;
             border-radius: 10px;
             margin:0;
@@ -74,6 +75,7 @@ img {
         .startButton {
             background-color: transparent;
             color:black;
+            border-color:#8A7C6B;
             margin:10px;
             margin-right:5px;
             width:250px;
@@ -116,7 +118,7 @@ img {
         }
         .startButton:hover {
             font-weight: bold;
-            border-color: skyblue;
+            border-color: #8A7C6B;
             color: black;
         }
 
@@ -145,9 +147,6 @@ img {
                     <h2>우주</h2>
                     <p>
                         우주에 대해 얼마나 알고계시나요?
-                        천문학의 역사는 문명의 역사만큼 오래되었고 하늘에 대한 호기심은
-                        최초의 지성이 지구에 탄생한 순간부터 시작되었습니다.
-                        알면 쉽지만 모르면 재밌는 문제들을 풀어보세요
                     </p>
                 </div>
                 <div class="selectionAndStart">
@@ -202,6 +201,38 @@ img {
             </div>
             <div class="img" id="worldImg">
                 <img src="img_newyork2.jpg">
+            </div>
+        </div>
+        <!--최고 문제 상자-----------------------------wQ-->
+        <div class="boxAndImg">
+            <div class="box">
+                <!--설명-->
+                <div class="comment" style="color:black">
+                    <h2>지구</h2>
+                    <p>
+                        지구에 대한 문제들입니다.
+                    </p>
+                </div>
+                <!-- 선택창과 버튼 -->
+                <div class="selectionAndStart">
+                    <select class="selectBox" id="uQselect" name="choice" onchange="handleOnChange(this)">
+                        <option value="none">선택</option>
+                        <option value=3>3문제</option>
+                        <option value=10>10문제</option>
+                    </select>
+                    <!--버튼-->
+                    <button class="startButton" id="eQstart" type="button" onclick="
+                        if(uQvalue > 0) {
+                            //데이터 전송
+                            location.href='q_earth.html?' + uQvalue + ':' + 'eQ';
+                        }
+                    ">
+                        <span class="BtnBackgroundEl"></span>
+                    시작!</button>
+                </div>
+            </div>
+            <div class="img" id="everestImg">
+                <img src="img_everest2.jpg"style="object-fit:contain; left:-40%; top:0%;">
             </div>
         </div>
         <!--

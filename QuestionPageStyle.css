@@ -32,6 +32,9 @@ body {
 #questionBox #commentArea {
     height: 200px;
 }
+    #chackAnswer {
+        font-size: larger;
+    }
 .backgroundCicle {     
     position: absolute;
 }
@@ -60,13 +63,13 @@ body {
     margin-bottom: 200px;
 }
 .c1{
-    animation: scale1 2s
+    animation: scale1 1.5s
 }
 .c2{
-    animation: scale2 2s
+    animation: scale2 1.5s
 }
 .c3{
-    animation: scale3 2s
+    animation: scale3 1.5s
 }
 
 .oxButton {
