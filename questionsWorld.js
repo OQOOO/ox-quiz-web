@@ -49,7 +49,7 @@ function questions(a) {
             document.getElementById('qTitle').innerHTML=
             "로마의 멸망";
             document.getElementById('question').innerHTML=
-            "로마 제국은 476년에 완전히 멸망하였다.";
+            "로마 제국은 476년에 멸망하였다.";
             questionPageFunc.answerAndComment('x', 
             "476년은 당시 양분된 로마 제국 중 서로마 제국의 멸망 시기이며 이는 유럽의 고대시대와 중세시대를 구분하는 기준이 됩니다. 동로마 제국은\
             1453년 콘스탄티노폴리스(현 이스탄불)가 오스만 제국에게 함락당해 멸망하게 되며, 이 또한 중세시대와 근대시대를 구분하는 기준이 됩니다.");
@@ -61,7 +61,7 @@ function questions(a) {
             document.getElementById('question').innerHTML=
             "대한민국은 NATO의 일원이 아니다.";
             questionPageFunc.answerAndComment('o',   
-            "NATO는 북대서양 조약기구입니다. 북미와 유럽국가들이 주로 가입되어있으며 북대서양과는 거리가 먼 대한민국이 가입할 일은 없습니다.");
+            "NATO는 북대서양 조약기구입니다. 북미와 유럽국가들이 주로 가입되어 있습니다.");
             break;
         case 5:
             questionPageFunc.setColor('#30588C', '#D7D8D9', '#30588C', '#D7D8D9', 'white');
@@ -91,87 +91,11 @@ function questions(a) {
             document.getElementById('qTitle').innerHTML=
             "이란인";
             document.getElementById('question').innerHTML=
-            "이란의 주요 민족은 아리아인이다.";
-            questionPageFunc.answerAndComment('o',   
+            "이란의 주요 민족은 아랍인이다.";
+            questionPageFunc.answerAndComment('x',   
             "'이란'은 '아리아인의 땅' 이라는 뜻을 가지고 있으며 이름대로 이란의 주요 민족은 이란계 아리아인 입니다.");
             break;
         case 8: //
-            questionPageFunc.setColor('#3C4959', '#D7D9CC', '#BF5A5A', '#F2F2DF', 'white');
-            if(btnCnt >= 1){
-                questionPageFunc.setColor('#D7D9CC', '#3C4959', '#BF5A5A', '#F2F2DF', 'black');
-            }
-            document.getElementById('qTitle').innerHTML=
-            "그레이트 게임";
-            document.getElementById('question').innerHTML=
-            "그레이트 게임은 제국주의 시대 영국과 프랑스의 패권 경쟁을 의미한다.";
-            questionPageFunc.answerAndComment('x',   
-            "그레이트 게임은 제국주의 시대에 유라시아 대륙의 패권을 두고 영국과 러시아가 벌인 경쟁을 의미하며 당시 세계 정세에 큰 영향을 미쳤습니다.");
-            break;
-        case 9: //
-            questionPageFunc.setColor('#3C4959', '#D7D9CC', '#BF5A5A', '#F2F2DF', 'white');
-            if(btnCnt >= 1){
-                questionPageFunc.setColor('#D7D9CC', '#3C4959', '#BF5A5A', '#F2F2DF', 'black');
-            }
-            document.getElementById('qTitle').innerHTML=
-            "인간의 수";
-            document.getElementById('question').innerHTML=
-            "인간의 생물량이 야생 포유류보다 많다.";
-            questionPageFunc.answerAndComment('o',   
-            "새를 포함한 육상 척추동물중 야생동물은 단 3%로 불과합니다. 나머지 32%는 인간이, 그리고 가축이 65%를 차지합니다.");
-            break;
-        case 10: //
-            questionPageFunc.setColor('#3C4959', '#D7D9CC', '#BF5A5A', '#F2F2DF', 'white');
-            if(btnCnt >= 1){
-                questionPageFunc.setColor('#D7D9CC', '#3C4959', '#BF5A5A', '#F2F2DF', 'black');
-            }
-            document.getElementById('qTitle').innerHTML=
-            "청나라";
-            document.getElementById('question').innerHTML=
-            "청나라의 지배층은 한족이 아니었다.";
-            questionPageFunc.answerAndComment('o', 
-            "청나라의 지배층은 대부분 만주족 이었습니다.");
-            break;
-        case 10:
-            questionPageFunc.setColor('#3C4959', '#D7D9CC', '#BF5A5A', '#F2F2DF', 'white');
-            if(btnCnt >= 1){
-                questionPageFunc.setColor('#D7D9CC', '#3C4959', '#BF5A5A', '#F2F2DF', 'black');
-            }
-            document.getElementById('qTitle').innerHTML=
-            "청나라";
-            document.getElementById('question').innerHTML=
-            "청나라의 지배층은 한족이 아니었다.";
-            questionPageFunc.answerAndComment('o', 
-            "청나라의 지배층은 대부분 만주족 이었습니다.");
-            break;
-        case 10:
-            questionPageFunc.setColor('#3C4959', '#D7D9CC', '#BF5A5A', '#F2F2DF', 'white');
-            if(btnCnt >= 1){
-                questionPageFunc.setColor('#D7D9CC', '#3C4959', '#BF5A5A', '#F2F2DF', 'black');
-            }
-            document.getElementById('qTitle').innerHTML=
-            "국공내전";
-            document.getElementById('question').innerHTML=
-            "국공내전의 승자는 중화민국이다.";
-            questionPageFunc.answerAndComment('x', 
-            "국공내전은 청나라의 멸망 이후 2차대전의 막바지까지 진행된 중국의 내전입니다. \
-            장제스가 이끄는 국민당과 마오쩌둥이 이끄는 공산당의 싸움에서 \
-            최종적으로 공산당이 승리하여 중화인민공화국을 수립하게 됩니다.");
-            break;
-        case 10: //
-            questionPageFunc.setColor('#3C4959', '#D7D9CC', '#BF5A5A', '#F2F2DF', 'white');
-            if(btnCnt >= 1){
-                questionPageFunc.setColor('#D7D9CC', '#3C4959', '#BF5A5A', '#F2F2DF', 'black');
-            }
-            document.getElementById('qTitle').innerHTML=
-            "쿠바 미사일 위기";
-            document.getElementById('question').innerHTML=
-            "쿠바 미사일 위기는 핵전쟁 위기였다.";
-            questionPageFunc.answerAndComment('o', 
-            "소련이 미국 바로 밑에있는 쿠바에 핵미사일 기지를 건설하여 시작된 위기사태로 핵전쟁에 가장 근접한 사건입니다.");
-            break;
-
-            //////////////////////////////////////////////////////////
-        case 10: //
             questionPageFunc.setColor('#3C4959', '#D7D9CC', '#BF5A5A', '#F2F2DF', 'white');
             if(btnCnt >= 1){
                 questionPageFunc.setColor('#D7D9CC', '#3C4959', '#BF5A5A', '#F2F2DF', 'black');
@@ -183,7 +107,7 @@ function questions(a) {
             questionPageFunc.answerAndComment('o',   
             "모기가 옮기는 말라리아와 뇌염 등으로 전세계에서 매년 72만명이 사망합니다.");
             break;
-        case 10: //
+        case 9: //
             questionPageFunc.setColor('#3C4959', '#D7D9CC', '#BF5A5A', '#F2F2DF', 'white');
             if(btnCnt >= 1){
                 questionPageFunc.setColor('#D7D9CC', '#3C4959', '#BF5A5A', '#F2F2DF', 'black');
